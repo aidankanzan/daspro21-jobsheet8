@@ -31,16 +31,17 @@ public class NilaiKelompok21 {
                     totalNilai += nilai;
                 }
                 double rataNilai = totalNilai / jumlahPenilai;
-                    System.out.println("Kelompok " + nomorKelompok+ ": nilai rata-rata = " + rataNilai);
+                System.out.println("Kelompok " + nomorKelompok+ ": nilai rata-rata = " + rataNilai);
                 if (rataNilai > rataTertinggi) {
+                    rataTertinggi=rataNilai;
+                    kelompokTerbaik=nomorKelompok;
                 }
                 nomorKelompok++;
             }
-        System.out.println("==============================");
-        System.out.println("Kelompok terbaik : " + kelompokTerbaik);
-        System.out.println("Rata-rata tertinggi : " + rataTertinggi);
-
-        sc.close();
+            System.out.println("==============================");
+            System.out.println("Kelompok terbaik : " + kelompokTerbaik);
+            System.out.println("Rata-rata tertinggi : " + rataTertinggi);
         }
+        sc.close();
     }
 }
